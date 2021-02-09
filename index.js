@@ -10,8 +10,16 @@ const homeRoute = require('./routes/index');
 
 
 // use express router
+// basically it is saying to go to homeRoute for any request that is
+// coming in
 
 app.use('/',homeRoute);
+
+// setting up the view engine
+
+app.set('view engine','ejs');
+
+app.set('views','./views');
 
 app.listen(port, function(err)
 {
